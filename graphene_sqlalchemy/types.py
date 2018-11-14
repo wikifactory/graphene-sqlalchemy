@@ -130,7 +130,7 @@ class SQLAlchemyObjectType(ObjectType):
                 connection_class = Connection
 
             connection = connection_class.create_type(
-                "{}Connection".format(cls.__name__), node=cls
+                "Auto{}Connection".format(cls.__name__), node=cls
             )
 
         if connection is not None:
